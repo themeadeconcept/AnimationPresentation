@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Presentation of Animations</title>
+  </head>
+  <body>
+    <!-- Page 1 (Intro) -->
+    <section id="page-1" class="page">
+      <h1>Welcome to My Presentation of Animations</h1>
+      <p>
+        This is a simple presentation of animations and transitions that I have
+        learned. I am using this page as a sandbox for practicing said
+        Animations. Please enjoy if you are viewing this animated slideshow!
+      </p>
+      <div>
+        <a href="#page-2" class="btn">
+          Next Page <i class="fas fa-arrow-circle-down"></i
+        ></a>
+      </div>
+    </section>
+
+    <!-- Page 2 -->
+    <section id="page-2" class="page">
+      <h1>This is my second page of the Great Animate Escape!</h1>
+      <p>
+        If you've made it this far then you have enjoyed the wonderful show!
+        Aren't you amazed at the awesomeness of CSS animations in its purest
+        form!?
+      </p>
+      <div>
+        <a href="#page-1" class="btn btn-dark">
+          Previous Page <i class="fas fa-arrow-circle-up"></i
+        ></a>
+        <a href="#page-3" class="btn">
+          Next Page <i class="fas fa-arrow-circle-down"></i
+        ></a>
+      </div>
+    </section>
+
+    <!-- Page 3 -->
+    <section id="page-3" class="page">
+      <h1>Here is round 3!</h1>
+      <p>
+        I don't think you can handle all of this! These are just way too
+        amazing. Best way to learn them, is to use them immediately!
+      </p>
+      <div>
+        <a href="#page-2" class="btn btn-dark">
+          Previous Page <i class="fas fa-arrow-circle-up"></i
+        ></a>
+        <a href="#page-4" class="btn">
+          Next Page <i class="fas fa-arrow-circle-down"></i
+        ></a>
+      </div>
+    </section>
+
+    <!-- Page 4 -->
+    <section id="page-4" class="page">
+      <h1>We are nearing the end...</h1>
+      <p>
+        Running out of these awesome animations, and I'm ready to keep learning.
+        This was fun, now lets animate ourselves out of here!
+      </p>
+      <div>
+        <a href="#page-3" class="btn">
+          Previous Page <i class="fas fa-arrow-circle-up"></i
+        ></a>
+      </div>
+    </section>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // JQUERY SMOOTH SCROLLING - hash is the ID of the element
+      $(".btn").on("click", function (event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          const hash = this.hash;
+          $("html, body").animate(
+            {
+              scrollTop: $(hash).offset().top,
+            },
+            800
+          );
+        }
+      });
+    </script>
+  </body>
+</html>
